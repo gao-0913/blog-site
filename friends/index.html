@@ -64,17 +64,17 @@
     <ul id="friends_link">
         
         <li class="friends_li">
-            <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank" class="search-title"
+            <a href="https://www.luogu.com.cn/user/1293601" target="_blank" class="search-title"
                 >
                 
-                <img src="/images/ayer.png">
+                <img src="/images/luogu.png">
                 
-                Ayer主题
+                洛谷
             </a>
         </li>
         
         <li class="friends_li">
-            <a href="https://github.com/Shen-Yu" target="_blank" class="search-title"
+            <a href="https://github.com/gao-0913" target="_blank" class="search-title"
                 >
                 
                 <img src="/images/github.png">
@@ -84,7 +84,7 @@
         </li>
         
         <li class="friends_li">
-            <a href="https://gitee.com/shen-yu" target="_blank" class="search-title"
+            <a href="https://gitee.com/g-ao" target="_blank" class="search-title"
                 >
                 
                 <img src="/images/gitee.png">
@@ -94,22 +94,62 @@
         </li>
         
         <li class="friends_li">
-            <a href="https://hexo.io" target="_blank" class="search-title"
+            <a href="https://www.douyin.com/user/MS4wLjABAAAABqwzV2Mgo6FGo_77KIhpM0vi1_plIhyLAjuIpalu151CG-IsCM1f5Qvr3SJN8SY9?from_tab_name=main" target="_blank" class="search-title"
                 >
                 
-                <img src="/images/hexo.png">
+                <img src="/images/douyin.png">
                 
-                Hexo官网
+                抖音
             </a>
         </li>
         
         <li class="friends_li">
-            <a href="https://github.com/Shen-Yu/hexo-tag-chart" target="_blank" class="search-title"
+            <a href="https://space.bilibili.com/1171198257" target="_blank" class="search-title"
                 >
                 
-                <img src="/images/hexo-tag-chart.png">
+                <img src="/images/bilibili.png">
                 
-                Hexo图表插件
+                bilibili
+            </a>
+        </li>
+        
+        <li class="friends_li">
+            <a href="https://blog.csdn.net/m0_71227570" target="_blank" class="search-title"
+                >
+                
+                <img src="/images/csdn.png">
+                
+                csdn
+            </a>
+        </li>
+        
+        <li class="friends_li">
+            <a href="https://club.fnnas.com/home.php?mod=space&uid=169422" target="_blank" class="search-title"
+                >
+                
+                <img src="/images/feiniu.png">
+                
+                飞牛社区
+            </a>
+        </li>
+        
+        <li class="friends_li">
+            <a href="https://music.163.com/#/user/home?id=5169387081" target="_blank" class="search-title"
+                >
+                
+                <img src="/images/wyyyy.png">
+                
+                网易云音乐
+            </a>
+        </li>
+        
+        <li class="friends_li">
+            <a href="https://baike.baidu.com/item/%E5%B9%BF%E5%B7%9E%E9%BE%99%E6%B6%9B%E5%A4%96%E5%9B%BD%E8%AF%AD%E5%AD%A6%E6%A0%A1/64200401" target="_blank" class="search-title"
+                >
+                
+                <img src="/images/gzlw.png">
+                
+                广州市龙涛外国语实验学校
             </a>
         </li>
         
@@ -443,7 +483,7 @@
     
     
     <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
-        src="//music.163.com/outchain/player?type=2&id=22707008&auto=1&height=32"></iframe>
+        src="//music.163.com/outchain/player?type=2&id=3344361861&auto=1&height=32"></iframe>
 </div>
 
 <style>
@@ -456,42 +496,6 @@
 </style>
     
     
-<script>
-  const password = "GAO090705";
-  const lock_password = window.sessionStorage.getItem("lock_password");
-  console.log(password, lock_password);
-  if (lock_password !== password) {
-    Swal.fire({
-      title: "请输入访问密码",
-      input: "text",
-      inputAttributes: {
-        autocapitalize: "off",
-      },
-      showCancelButton: false,
-      showLoaderOnConfirm: true,
-      allowOutsideClick: false,
-      confirmButtonText: "确定",
-    }).then((result) => {
-      console.log(result);
-      if (result.isConfirmed) {
-        console.log(password);
-        if (result.value === password) {
-          window.sessionStorage.setItem("lock_password", result.value);
-        } else {
-          Swal.fire({
-            icon: "error",
-            title: "密码错误，请重试",
-            confirmButtonText: "确定",
-            allowOutsideClick: false,
-          }).then(() => {
-            window.location.reload();
-          });
-        }
-      }
-    });
-  }
-</script>
-
 
   </div>
 </body>
