@@ -10,7 +10,100 @@
   <rights>All rights reserved 2026, 高源</rights>
   <subtitle>雄鹰高展翅，鸣一声惊人，乘风踏万里青云</subtitle>
   <title>高源</title>
-  <updated>2026-08-16T15:05:17.204Z</updated>
+  <updated>2026-08-24T12:18:12.265Z</updated>
+  <entry>
+    <author>
+      <name>高源</name>
+    </author>
+    <category term="CTF刷题" scheme="https://g-ao.pages.dev/categories/CTF%E5%88%B7%E9%A2%98/"/>
+    <category term="CTF" scheme="https://g-ao.pages.dev/tags/CTF/"/>
+    <category term="Bugku" scheme="https://g-ao.pages.dev/tags/Bugku/"/>
+    <category term="压缩包分析" scheme="https://g-ao.pages.dev/tags/%E5%8E%8B%E7%BC%A9%E5%8C%85%E5%88%86%E6%9E%90/"/>
+    <category term="Linux" scheme="https://g-ao.pages.dev/tags/Linux/"/>
+    <content>
+      <![CDATA[<p>题目链接：<a href="https://ctf.bugku.com/challenges/detail/id/15.html">https://ctf.bugku.com/challenges/detail/id/15.html</a></p><blockquote><p>提示: key{}<br>描述: linux基础问题</p></blockquote><p>先下载题目文件，得到一个 zip 压缩包。<br>解压 zip 得到文件夹，文件夹内是 <code>tar.gz</code> 文件。</p><span id="more"></span><h2 id="方法1：Kali-Linux-虚拟机解题"><a href="#方法1：Kali-Linux-虚拟机解题" class="headerlink" title="方法1：Kali Linux 虚拟机解题"></a>方法1：Kali Linux 虚拟机解题</h2><p>打开Kali或者纯Linux虚拟机，将文件拖入虚拟机，切换到压缩包所在目录。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home/kali/桌面</span><br><span class="line"><span class="built_in">ls</span></span><br></pre></td></tr></table></figure><p>可以看到 <code>1.tar.gz</code>，使用 <code>tar -xvf</code> 命令解压文件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xzvf 1.tar.gz</span><br></pre></td></tr></table></figure><p>解压完成，再次查看目录：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span></span><br></pre></td></tr></table></figure><p>出现新的 <code>test</code> 文件夹，进入文件夹：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> <span class="built_in">test</span></span><br><span class="line"><span class="built_in">ls</span></span><br></pre></td></tr></table></figure><p>目录内存在 <code>flag</code> 文件，使用 <code>cat</code> 读取文件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> flag</span><br></pre></td></tr></table></figure><p>文件大部分是乱码，滚动到文件末尾即可找到flag。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">info files[Trash Info]</span><br><span class="line">Path=game</span><br><span class="line">DeletionDate=2016-06-27T12:27:37</span><br><span class="line">key&#123;&#125;</span><br><span class="line">key&#123;&#125;</span><br><span class="line">key&#123;feb81d3834e2423c9903f4755464060b&#125;</span><br></pre></td></tr></table></figure><h2 id="方法2：Windows本地解压"><a href="#方法2：Windows本地解压" class="headerlink" title="方法2：Windows本地解压"></a>方法2：Windows本地解压</h2><p>在自己电脑上直接解压 <code>1.tar.gz</code>，同样得到flag文件。<br>使用记事本打开flag文件，根据提示<code>key&#123;&#125;</code>，使用快捷键 <code>Ctrl+F</code> 搜索 <code>key&#123;</code>，多次查找定位，即可找到flag。</p><h2 id="最终-Flag"><a href="#最终-Flag" class="headerlink" title="最终 Flag"></a>最终 Flag</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">key&#123;feb81d3834e2423c9903f4755464060b&#125;</span><br></pre></td></tr></table></figure>]]>
+    </content>
+    <id>https://g-ao.pages.dev/2026/08/24/Bugku%EF%BD%9Clinux/</id>
+    <link href="https://g-ao.pages.dev/2026/08/24/Bugku%EF%BD%9Clinux/"/>
+    <published>2026-08-24T12:16:38.000Z</published>
+    <summary>
+      <![CDATA[<p>题目链接：<a href="https://ctf.bugku.com/challenges/detail/id/15.html">https://ctf.bugku.com/challenges/detail/id/15.html</a></p>
+<blockquote>
+<p>提示: key{}<br>描述: linux基础问题</p>
+</blockquote>
+<p>先下载题目文件，得到一个 zip 压缩包。<br>解压 zip 得到文件夹，文件夹内是 <code>tar.gz</code> 文件。</p>]]>
+    </summary>
+    <title>Bugku｜linux</title>
+    <updated>2026-08-24T12:18:12.265Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>高源</name>
+    </author>
+    <category term="CTF刷题" scheme="https://g-ao.pages.dev/categories/CTF%E5%88%B7%E9%A2%98/"/>
+    <category term="CTF" scheme="https://g-ao.pages.dev/tags/CTF/"/>
+    <category term="Bugku" scheme="https://g-ao.pages.dev/tags/Bugku/"/>
+    <category term="核心价值观编码" scheme="https://g-ao.pages.dev/tags/%E6%A0%B8%E5%BF%83%E4%BB%B7%E5%80%BC%E8%A7%82%E7%BC%96%E7%A0%81/"/>
+    <content>
+      <![CDATA[<p>题目链接：<a href="https://ctf.bugku.com/challenges/detail/id/61.html">https://ctf.bugku.com/challenges/detail/id/61.html</a></p><h2 id="题目密文"><a href="#题目密文" class="headerlink" title="题目密文"></a>题目密文</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">公正公正公正诚信文明公正民主公正法治法治友善平等和谐敬业和谐富强和谐富强和谐文明和谐平等公正公正和谐法治公正公正公正文明和谐民主和谐敬业和谐平等和谐敬业和谐敬业和谐和谐和谐公正法治友善法治</span><br></pre></td></tr></table></figure><span id="more"></span><h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>该题为社会主义核心价值观编码。</p><p>在线解密工具：<a href="https://ctf.bugku.com/tool/cvecode">https://ctf.bugku.com/tool/cvecode</a></p><p>操作：复制密文粘贴到工具输入框，点击解密即可得到flag。</p><h2 id="最终-Flag"><a href="#最终-Flag" class="headerlink" title="最终 Flag"></a>最终 Flag</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;90025f7fb1959936&#125;</span><br></pre></td></tr></table></figure>]]>
+    </content>
+    <id>https://g-ao.pages.dev/2026/08/24/Bugku%EF%BD%9C%E5%AF%8C%E5%BC%BA%E6%B0%91%E4%B8%BB/</id>
+    <link href="https://g-ao.pages.dev/2026/08/24/Bugku%EF%BD%9C%E5%AF%8C%E5%BC%BA%E6%B0%91%E4%B8%BB/"/>
+    <published>2026-08-24T12:10:25.000Z</published>
+    <summary>
+      <![CDATA[<p>题目链接：<a href="https://ctf.bugku.com/challenges/detail/id/61.html">https://ctf.bugku.com/challenges/detail/id/61.html</a></p>
+<h2 id="题目密文"><a href="#题目密文" class="headerlink" title="题目密文"></a>题目密文</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">公正公正公正诚信文明公正民主公正法治法治友善平等和谐敬业和谐富强和谐富强和谐文明和谐平等公正公正和谐法治公正公正公正文明和谐民主和谐敬业和谐平等和谐敬业和谐敬业和谐和谐和谐公正法治友善法治</span><br></pre></td></tr></table></figure>]]>
+    </summary>
+    <title>Bugku｜富强民主</title>
+    <updated>2026-08-24T12:14:17.813Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>高源</name>
+    </author>
+    <category term="CTF刷题" scheme="https://g-ao.pages.dev/categories/CTF%E5%88%B7%E9%A2%98/"/>
+    <category term="CTF" scheme="https://g-ao.pages.dev/tags/CTF/"/>
+    <category term="Bugku" scheme="https://g-ao.pages.dev/tags/Bugku/"/>
+    <category term="Ook!" scheme="https://g-ao.pages.dev/tags/Ook/"/>
+    <category term="BrainFuck" scheme="https://g-ao.pages.dev/tags/BrainFuck/"/>
+    <content>
+      <![CDATA[<p>题目链接：<a href="https://ctf.bugku.com/challenges/detail/id/54.html">https://ctf.bugku.com/challenges/detail/id/54.html</a></p><h3 id="下载题目文件，打开得到密文："><a href="#下载题目文件，打开得到密文：" class="headerlink" title="下载题目文件，打开得到密文："></a>下载题目文件，打开得到密文：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">..... ..... ..... ..... !?!!. ?.... ..... ..... ..... .?.?! .?... .!...</span><br><span class="line">..... ..... !.?.. ..... !?!!. ?!!!! !!?.? !.?!! !!!.. ..... ..... .!.?.</span><br><span class="line">..... ...!? !!.?. ..... ..?.? !.?.. ..... .!.?. ..... ..... !?!!. ?!!!!</span><br><span class="line">!!!!! !?.?! .?!.? ..... ....! ?!!.? ..... ...?. ?!.?. ..... !.?.. .....</span><br><span class="line">!?!!. ?!!!! !!?.? !.?!! !!!!! !!!!. ..... ...!. ?.... ...!? !!.?. .....</span><br><span class="line">?.?!. ?..!. ?.... ..... !?!!. ?!!!! !!!!? .?!.? !!!!! !!!!! !!!.? .....</span><br><span class="line">..!?! !.?.. ....? .?!.? ....! .!!!. !!!!! !!!!! !!!!! !!.?. ..... .!?!!</span><br><span class="line">.?... ...?. ?!.?. ..... !.!!! !!!!! !.?.. ..... ..!?! !.?.. ..... .?.?!</span><br><span class="line">.?... ..... !.?.</span><br></pre></td></tr></table></figure><span id="more"></span><p>不难看出是BrainFuck编码，Ook!是标准BrainFuck编码的一种变体，本题密文是Ook!编码的一种变体。</p><p>使用在线网站：<a href="https://stuff.splitbrain.org/ook/">https://stuff.splitbrain.org/ook/</a></p><p>复制密文粘贴进去，点击<code>Ook! to text</code></p><p>得到flag</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;bugku_jiami&#125;</span><br></pre></td></tr></table></figure><h2 id="最终-Flag"><a href="#最终-Flag" class="headerlink" title="最终 Flag"></a>最终 Flag</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;bugku_jiami&#125;</span><br></pre></td></tr></table></figure>]]>
+    </content>
+    <id>https://g-ao.pages.dev/2026/08/24/Bugku%EF%BD%9C.!%EF%BC%9F/</id>
+    <link href="https://g-ao.pages.dev/2026/08/24/Bugku%EF%BD%9C.!%EF%BC%9F/"/>
+    <published>2026-08-24T11:55:59.000Z</published>
+    <summary>
+      <![CDATA[<p>题目链接：<a href="https://ctf.bugku.com/challenges/detail/id/54.html">https://ctf.bugku.com/challenges/detail/id/54.html</a></p>
+<h3 id="下载题目文件，打开得到密文："><a href="#下载题目文件，打开得到密文：" class="headerlink" title="下载题目文件，打开得到密文："></a>下载题目文件，打开得到密文：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">..... ..... ..... ..... !?!!. ?.... ..... ..... ..... .?.?! .?... .!...</span><br><span class="line">..... ..... !.?.. ..... !?!!. ?!!!! !!?.? !.?!! !!!.. ..... ..... .!.?.</span><br><span class="line">..... ...!? !!.?. ..... ..?.? !.?.. ..... .!.?. ..... ..... !?!!. ?!!!!</span><br><span class="line">!!!!! !?.?! .?!.? ..... ....! ?!!.? ..... ...?. ?!.?. ..... !.?.. .....</span><br><span class="line">!?!!. ?!!!! !!?.? !.?!! !!!!! !!!!. ..... ...!. ?.... ...!? !!.?. .....</span><br><span class="line">?.?!. ?..!. ?.... ..... !?!!. ?!!!! !!!!? .?!.? !!!!! !!!!! !!!.? .....</span><br><span class="line">..!?! !.?.. ....? .?!.? ....! .!!!. !!!!! !!!!! !!!!! !!.?. ..... .!?!!</span><br><span class="line">.?... ...?. ?!.?. ..... !.!!! !!!!! !.?.. ..... ..!?! !.?.. ..... .?.?!</span><br><span class="line">.?... ..... !.?.</span><br></pre></td></tr></table></figure>]]>
+    </summary>
+    <title>Bugku｜.!?</title>
+    <updated>2026-08-24T12:15:26.345Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>高源</name>
+    </author>
+    <category term="CTF刷题" scheme="https://g-ao.pages.dev/categories/CTF%E5%88%B7%E9%A2%98/"/>
+    <category term="CTF" scheme="https://g-ao.pages.dev/tags/CTF/"/>
+    <category term="Bugku" scheme="https://g-ao.pages.dev/tags/Bugku/"/>
+    <category term="置换密码" scheme="https://g-ao.pages.dev/tags/%E7%BD%AE%E6%8D%A2%E5%AF%86%E7%A0%81/"/>
+    <content>
+      <![CDATA[<p>题目链接：<a href="https://ctf.bugku.com/challenges/detail/id/52.html?id=52">https://ctf.bugku.com/challenges/detail/id/52.html?id=52</a></p><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><blockquote><p>If5{ag024c483549d7fd@@@1} 一张纸条上凌乱的写着 2 1 6 5 3 4</p></blockquote><p>看到密文 <code>If5&#123;ag024c483549d7fd@@@1&#125;</code>，顺序是乱的，纸条上的 <code>2 1 6 5 3 4</code> 猜测为加密算法的密钥。</p><p>尝试按照<code>216534</code>的顺序把前六个字符重新排序，得到<code>flag&#123;5</code>，符合 flag 格式，判断为<strong>置换密码</strong>。</p><span id="more"></span><h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>将密文<strong>每6个字符分为一组</strong>，每组字符按照密钥<code>216534</code>的顺序重排，拼接所有分组结果；末尾的<code>@</code>为填充字符，无实际含义，最后删除填充字符即可得到 flag。</p><h2 id="Python-解密脚本"><a href="#Python-解密脚本" class="headerlink" title="Python 解密脚本"></a>Python 解密脚本</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">decrypt_group</span>(<span class="params">cipher, key</span>):</span><br><span class="line">    n = <span class="built_in">len</span>(key)</span><br><span class="line">    result = <span class="string">&quot;&quot;</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="built_in">len</span>(cipher), n):</span><br><span class="line">        block = cipher[i:i+n]</span><br><span class="line">        temp = [<span class="string">&#x27;&#x27;</span>] * n</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(block)):</span><br><span class="line">            temp[<span class="built_in">int</span>(key[j]) - <span class="number">1</span>] = block[j]</span><br><span class="line">        result += <span class="string">&quot;&quot;</span>.join(temp)</span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line">cipher = <span class="string">&quot;If5&#123;ag024c483549d7fd@@@1&#125;&quot;</span></span><br><span class="line">key = <span class="string">&quot;216534&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(decrypt_group(cipher, key))</span><br></pre></td></tr></table></figure><h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;52048c453d794df1&#125;@@</span><br></pre></td></tr></table></figure><blockquote><p>说明：密钥是6位数字，密文总长度不是6的倍数，加密时使用<code>@</code>填充空位，<code>@</code>没有实际意义，直接删除。</p></blockquote><h2 id="最终-Flag"><a href="#最终-Flag" class="headerlink" title="最终 Flag"></a>最终 Flag</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;52048c453d794df1&#125;</span><br></pre></td></tr></table></figure><hr>]]>
+    </content>
+    <id>https://g-ao.pages.dev/2026/08/24/Bugku%EF%BD%9C%E6%95%A3%E4%B9%B1%E7%9A%84%E5%AF%86%E6%96%87/</id>
+    <link href="https://g-ao.pages.dev/2026/08/24/Bugku%EF%BD%9C%E6%95%A3%E4%B9%B1%E7%9A%84%E5%AF%86%E6%96%87/"/>
+    <published>2026-08-24T11:39:24.000Z</published>
+    <summary>
+      <![CDATA[<p>题目链接：<a href="https://ctf.bugku.com/challenges/detail/id/52.html?id=52">https://ctf.bugku.com/challenges/detail/id/52.html?id=52</a></p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><blockquote>
+<p>If5{ag024c483549d7fd@@@1} 一张纸条上凌乱的写着 2 1 6 5 3 4</p>
+</blockquote>
+<p>看到密文 <code>If5&#123;ag024c483549d7fd@@@1&#125;</code>，顺序是乱的，纸条上的 <code>2 1 6 5 3 4</code> 猜测为加密算法的密钥。</p>
+<p>尝试按照<code>216534</code>的顺序把前六个字符重新排序，得到<code>flag&#123;5</code>，符合 flag 格式，判断为<strong>置换密码</strong>。</p>]]>
+    </summary>
+    <title>Bugku｜散乱的密文</title>
+    <updated>2026-08-24T12:15:40.815Z</updated>
+  </entry>
   <entry>
     <author>
       <name>高源</name>
