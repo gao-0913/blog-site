@@ -10,7 +10,30 @@
   <rights>All rights reserved 2026, 高源</rights>
   <subtitle>雄鹰高展翅，鸣一声惊人，乘风踏万里青云</subtitle>
   <title>高源</title>
-  <updated>2026-08-24T12:18:12.265Z</updated>
+  <updated>2026-08-24T12:30:37.508Z</updated>
+  <entry>
+    <author>
+      <name>高源</name>
+    </author>
+    <category term="CTF刷题" scheme="https://g-ao.pages.dev/categories/CTF%E5%88%B7%E9%A2%98/"/>
+    <category term="CTF" scheme="https://g-ao.pages.dev/tags/CTF/"/>
+    <category term="Bugku" scheme="https://g-ao.pages.dev/tags/Bugku/"/>
+    <category term="BrainFuck" scheme="https://g-ao.pages.dev/tags/BrainFuck/"/>
+    <content>
+      <![CDATA[<p>题目链接：<a href="https://ctf.bugku.com/challenges/detail/id/49.html">https://ctf.bugku.com/challenges/detail/id/49.html</a></p><h2 id="题目密文"><a href="#题目密文" class="headerlink" title="题目密文"></a>题目密文</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+++++ +++++ [-&gt;++ +++++ ++++&lt;]&gt;++. +++++ .&lt;+++ [-&gt;-- -&lt;]&gt;- .+++ +++.&lt; ++++[ -&gt;+++ +&lt;]&gt;+ ++++.&lt; +++++ +++[-&gt; --- --&lt; ]&gt;— ——.&lt; +++++ ++[-&gt; +++++ ++&lt;]&gt; ++++.&lt; +++++ +[-&gt;- — &lt;]&gt;— —.-.—.-.++ +++++ +.&lt;++ +++++[-&gt;+++ ++++&lt;]&gt;++++ +.++.&lt;+++++ ++[-&gt; — —&lt;]&gt;— ——.-.&lt;++ +++++[-&gt;++ +++++ &lt;]&gt;+.—.++++.&lt;+++++ +++[-&gt;— —&lt;]&gt;— .+.&lt;+ +++++ ++[-&gt; +++++ +++&lt;]&gt;++++ +++++ ++.&lt;</span><br></pre></td></tr></table></figure><span id="more"></span><h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>显而易见是brainfuck编码。</p><p>使用在线网站：<a href="https://stuff.splitbrain.org/ook/">https://stuff.splitbrain.org/ook/</a></p><p>输入编码，点击<code>Brainfuck to text</code>。</p><h2 id="最终-Flag"><a href="#最终-Flag" class="headerlink" title="最终 Flag"></a>最终 Flag</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;0d86208ac54fbf12&#125;</span><br></pre></td></tr></table></figure>]]>
+    </content>
+    <id>https://g-ao.pages.dev/2026/08/24/Bugku%EF%BD%9C%5B+-%E3%80%8A%E3%80%8B%5D/</id>
+    <link href="https://g-ao.pages.dev/2026/08/24/Bugku%EF%BD%9C%5B+-%E3%80%8A%E3%80%8B%5D/"/>
+    <published>2026-08-24T12:27:37.000Z</published>
+    <summary>
+      <![CDATA[<p>题目链接：<a href="https://ctf.bugku.com/challenges/detail/id/49.html">https://ctf.bugku.com/challenges/detail/id/49.html</a></p>
+<h2 id="题目密文"><a href="#题目密文" class="headerlink" title="题目密文"></a>题目密文</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+++++ +++++ [-&gt;++ +++++ ++++&lt;]&gt;++. +++++ .&lt;+++ [-&gt;-- -&lt;]&gt;- .+++ +++.&lt; ++++[ -&gt;+++ +&lt;]&gt;+ ++++.&lt; +++++ +++[-&gt; --- --&lt; ]&gt;— ——.&lt; +++++ ++[-&gt; +++++ ++&lt;]&gt; ++++.&lt; +++++ +[-&gt;- — &lt;]&gt;— —.-.—.-.++ +++++ +.&lt;++ +++++[-&gt;+++ ++++&lt;]&gt;++++ +.++.&lt;+++++ ++[-&gt; — —&lt;]&gt;— ——.-.&lt;++ +++++[-&gt;++ +++++ &lt;]&gt;+.—.++++.&lt;+++++ +++[-&gt;— —&lt;]&gt;— .+.&lt;+ +++++ ++[-&gt; +++++ +++&lt;]&gt;++++ +++++ ++.&lt;</span><br></pre></td></tr></table></figure>]]>
+    </summary>
+    <title>
+      <![CDATA[Bugku｜[+-<>]]]>
+    </title>
+    <updated>2026-08-24T12:30:37.508Z</updated>
+  </entry>
   <entry>
     <author>
       <name>高源</name>
