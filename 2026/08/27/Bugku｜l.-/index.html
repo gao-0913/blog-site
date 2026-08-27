@@ -15,7 +15,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>Bugku｜聪明的小羊 |  高源</title>
+      <title>Bugku｜/.- |  高源</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -61,7 +61,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-Bugku｜聪明的小羊"
+  id="post-Bugku｜l.-"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -72,7 +72,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  Bugku｜聪明的小羊
+  Bugku｜/.-
 </h1>
  
 
@@ -80,8 +80,8 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2026/08/27/Bugku%EF%BD%9C%E8%81%AA%E6%98%8E%E7%9A%84%E5%B0%8F%E7%BE%8A/" class="article-date">
-  <time datetime="2026-08-27T02:08:42.000Z" itemprop="datePublished">2026-08-27</time>
+      <a href="/2026/08/27/Bugku%EF%BD%9Cl.-/" class="article-date">
+  <time datetime="2026-08-27T09:09:33.000Z" itemprop="datePublished">2026-08-27</time>
 </a> 
   <div class="article-category">
     <a class="article-category-link" href="/categories/CTF%E5%88%B7%E9%A2%98/">CTF刷题</a>
@@ -92,7 +92,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">102</span>
+            <span class="post-count">489</span>
         </span>
     </span>
 
@@ -101,7 +101,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">1 分钟</span>
+            <span class="post-count">2 分钟</span>
         </span>
     </span>
 </div>
@@ -116,19 +116,23 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>题目链接：<a target="_blank" rel="noopener" href="https://ctf.bugku.com/challenges/detail/id/47.html">https://ctf.bugku.com/challenges/detail/id/47.html</a></p>
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>一只小羊翻过了2个栅栏 <code>fa&#123;fe13f590lg6d46d0d0&#125;</code></p>
-<span id="more"></span>
+  <p>题目链接：<a target="_blank" rel="noopener" href="https://ctf.bugku.com/challenges/detail/id/46.html">https://ctf.bugku.com/challenges/detail/id/46.html</a></p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.-./.-../.-/--./----.--/-../...--/..-./-.-./-.../..-./.----/--.../..-./----./...--/----./----./...../-----/....-/-----.-</span><br></pre></td></tr></table></figure>
 
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>看到关键词提示：<strong>2个栅栏</strong>，可以判断是栅栏密码。</p>
-<h2 id="解密工具"><a href="#解密工具" class="headerlink" title="解密工具"></a>解密工具</h2><p>在线栅栏密码解密网站：<a target="_blank" rel="noopener" href="https://ctf.bugku.com/tool/railfence">https://ctf.bugku.com/tool/railfence</a></p>
-<ol>
-<li>根据提示，栏数设置为 <code>2</code></li>
-<li>输入密文：<code>fa&#123;fe13f590lg6d46d0d0&#125;</code></li>
-<li>点击解密</li>
-</ol>
-<h2 id="得到-Flag"><a href="#得到-Flag" class="headerlink" title="得到 Flag"></a>得到 Flag</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;6fde4163df05d900&#125;</span><br></pre></td></tr></table></figure>
- 
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>明显是<strong>摩斯密码</strong>，上网查找摩斯密码对应表，编写解密脚本。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">table = &#123;</span><br><span class="line">    <span class="string">&#x27;.-&#x27;</span>:<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;-...&#x27;</span>:<span class="string">&#x27;B&#x27;</span>,<span class="string">&#x27;-.-.&#x27;</span>:<span class="string">&#x27;C&#x27;</span>,<span class="string">&#x27;-..&#x27;</span>:<span class="string">&#x27;D&#x27;</span>,<span class="string">&#x27;.&#x27;</span>:<span class="string">&#x27;E&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;..-.&#x27;</span>:<span class="string">&#x27;F&#x27;</span>,<span class="string">&#x27;--.&#x27;</span>:<span class="string">&#x27;G&#x27;</span>,<span class="string">&#x27;....&#x27;</span>:<span class="string">&#x27;H&#x27;</span>,<span class="string">&#x27;..&#x27;</span>:<span class="string">&#x27;I&#x27;</span>,<span class="string">&#x27;.---&#x27;</span>:<span class="string">&#x27;J&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;-.-&#x27;</span>:<span class="string">&#x27;K&#x27;</span>,<span class="string">&#x27;.-..&#x27;</span>:<span class="string">&#x27;L&#x27;</span>,<span class="string">&#x27;--&#x27;</span>:<span class="string">&#x27;M&#x27;</span>,<span class="string">&#x27;-.&#x27;</span>:<span class="string">&#x27;N&#x27;</span>,<span class="string">&#x27;---&#x27;</span>:<span class="string">&#x27;O&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;.--.&#x27;</span>:<span class="string">&#x27;P&#x27;</span>,<span class="string">&#x27;--.-&#x27;</span>:<span class="string">&#x27;Q&#x27;</span>,<span class="string">&#x27;.-.&#x27;</span>:<span class="string">&#x27;R&#x27;</span>,<span class="string">&#x27;...&#x27;</span>:<span class="string">&#x27;S&#x27;</span>,<span class="string">&#x27;-&#x27;</span>:<span class="string">&#x27;T&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;..-&#x27;</span>:<span class="string">&#x27;U&#x27;</span>,<span class="string">&#x27;...-&#x27;</span>:<span class="string">&#x27;V&#x27;</span>,<span class="string">&#x27;.--&#x27;</span>:<span class="string">&#x27;W&#x27;</span>,<span class="string">&#x27;-..-&#x27;</span>:<span class="string">&#x27;X&#x27;</span>,<span class="string">&#x27;-.--&#x27;</span>:<span class="string">&#x27;Y&#x27;</span>,<span class="string">&#x27;--..&#x27;</span>:<span class="string">&#x27;Z&#x27;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&#x27;-----&#x27;</span>:<span class="string">&#x27;0&#x27;</span>,<span class="string">&#x27;.----&#x27;</span>:<span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;..---&#x27;</span>:<span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;...--&#x27;</span>:<span class="string">&#x27;3&#x27;</span>,<span class="string">&#x27;....-&#x27;</span>:<span class="string">&#x27;4&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;.....&#x27;</span>:<span class="string">&#x27;5&#x27;</span>,<span class="string">&#x27;-....&#x27;</span>:<span class="string">&#x27;6&#x27;</span>,<span class="string">&#x27;--...&#x27;</span>:<span class="string">&#x27;7&#x27;</span>,<span class="string">&#x27;---..&#x27;</span>:<span class="string">&#x27;8&#x27;</span>,<span class="string">&#x27;----.&#x27;</span>:<span class="string">&#x27;9&#x27;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="string">&#x27;.-.-.-&#x27;</span>:<span class="string">&#x27;.&#x27;</span>,<span class="string">&#x27;--..--&#x27;</span>:<span class="string">&#x27;,&#x27;</span>,<span class="string">&#x27;..--..&#x27;</span>:<span class="string">&#x27;?&#x27;</span>,<span class="string">&#x27;.----.&#x27;</span>:<span class="string">&quot;&#x27;&quot;</span>,<span class="string">&#x27;-....-&#x27;</span>:<span class="string">&#x27;-&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;-..-.&#x27;</span>:<span class="string">&#x27;/&#x27;</span>,<span class="string">&#x27;---...&#x27;</span>:<span class="string">&#x27;:&#x27;</span>,<span class="string">&#x27;-.-.-.&#x27;</span>:<span class="string">&#x27;;&#x27;</span>,<span class="string">&#x27;-...-&#x27;</span>:<span class="string">&#x27;=&#x27;</span>, <span class="string">&#x27;.-...&#x27;</span>:<span class="string">&#x27;&amp;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;---..-&#x27;</span>:<span class="string">&#x27;!&#x27;</span>,<span class="string">&#x27;.-.-&#x27;</span>:<span class="string">&#x27;+&#x27;</span>,<span class="string">&#x27;-....-&#x27;</span>:<span class="string">&#x27;_&#x27;</span>,<span class="string">&#x27;..--.-&#x27;</span>:<span class="string">&#x27;&quot;&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;.-..-.&#x27;</span>:<span class="string">&#x27;&quot;&#x27;</span>,<span class="string">&#x27;...-..-&#x27;</span>:<span class="string">&#x27;$&#x27;</span>,<span class="string">&#x27;.--.-.&#x27;</span>:<span class="string">&#x27;@&#x27;</span>,<span class="string">&#x27;.-...&#x27;</span>:<span class="string">&#x27;ç&#x27;</span>,<span class="string">&#x27;----..&#x27;</span>:<span class="string">&#x27;|&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">d = <span class="string">&quot;.-../-.-./---/.-./-../-./-./-../-./---/.-./-./-./---/.-./---/-&quot;</span></span><br><span class="line">fenge = d.split(<span class="string">&#x27;/&#x27;</span>)</span><br><span class="line">result = <span class="string">&quot;&quot;</span>.join(table.get(s,<span class="string">&#x27;未知&#x27;</span>) <span class="keyword">for</span> s <span class="keyword">in</span> fenge)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>d.split(&#39;/&#39;)</code>意思是用<code>/</code>将它们分割成列表，有的时候默认是空格分割。</p>
+</blockquote>
+<p>运行得到结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FLAG未知D3FCBF17F9399504未知</span><br></pre></td></tr></table></figure>
+
+<p>发现两个未知位置是<code>(</code> 和 <code>)</code><br>搜索发现在标准摩斯密码对应表中没有正反大括号的对应的摩斯密码，所以导致解码失败。<br>所以猜测flag是：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FLAG(D3FCBF17F9399504)</span><br></pre></td></tr></table></figure>
+
+<p>提交发现错误，再次搜索资料发现摩斯密码只区分字母，但是关于字母的具体大小写不做区分，所以再次编写脚本把所有大写转成小写。</p>
+<h2 id="最终-Flag"><a href="#最终-Flag" class="headerlink" title="最终 Flag"></a>最终 Flag</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;d3fcbf17f9399504&#125;</span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
       <div id="reword-out">
@@ -198,12 +202,12 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://g-ao.pages.dev/2026/08/27/Bugku%EF%BD%9C%E8%81%AA%E6%98%8E%E7%9A%84%E5%B0%8F%E7%BE%8A/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://g-ao.pages.dev/2026/08/27/Bugku%EF%BD%9Cl.-/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bugku/" rel="tag">Bugku</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CTF/" rel="tag">CTF</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%A0%85%E6%A0%8F%E5%AF%86%E7%A0%81/" rel="tag">栅栏密码</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bugku/" rel="tag">Bugku</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CTF/" rel="tag">CTF</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%91%A9%E6%96%AF%E5%AF%86%E7%A0%81/" rel="tag">摩斯密码</a></li></ul>
 
     </footer>
   </div>
@@ -211,19 +215,19 @@
    
   <nav class="article-nav">
     
-      <a href="/2026/08/27/Bugku%EF%BD%9Cl.-/" class="article-nav-link">
+      <a href="/2026/08/27/Bugku%EF%BD%9C%E9%9A%90%E5%86%99%203/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            Bugku｜/.-
+            Bugku｜隐写 3
           
         </div>
       </a>
     
     
-      <a href="/2026/08/27/Bugku%EF%BD%9COok/" class="article-nav-link">
+      <a href="/2026/08/27/Bugku%EF%BD%9C%E8%81%AA%E6%98%8E%E7%9A%84%E5%B0%8F%E7%BE%8A/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">Bugku｜Ook.</div>
+        <div class="article-nav-title">Bugku｜聪明的小羊</div>
       </a>
     
   </nav>
